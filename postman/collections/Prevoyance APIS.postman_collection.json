@@ -1,0 +1,250 @@
+{
+  "info": {
+    "_postman_id": "04ffe009-1192-4d51-ab0e-45504251649f",
+    "name": "Prevoyance APIS",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "32191845"
+  },
+  "item": [
+    {
+      "name": "Get All Orders By ADMIN",
+      "id": "61097f8e-3bef-42f0-9efe-e27652620ac8",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsInJvbGUiOiJhZG1pbiIsIm5hbWUiOiJBZG1pbiIsImlhdCI6MTc2NDIyOTIzMSwiZXhwIjoxNzY0MjM2NDMxfQ.5ITqnNINxV3GZfUJ6PM7_bFeRamC6sXeullUzZ9kjTA",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/admin/orders",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "admin",
+            "orders"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Order Product",
+      "id": "ee40486b-d9aa-4b36-9642-63d224e163a2",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhbWFuQGV4YW1wbGUuY29tIiwicm9sZSI6InVzZXIiLCJuYW1lIjoiQW1hbiIsImlhdCI6MTc2NDIyODQyNSwiZXhwIjoxNzY0MjM1NjI1fQ.FGg989sfVeIcR8D-jmG7YuvmKaQXGg-xHzWjUjCc-w0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"items\": [\r\n    { \"productId\": 3, \"quantity\": 3 },\r\n    { \"productId\": 1, \"quantity\": 2 }\r\n  ]\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/orders",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "orders"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Check Health Of Server",
+      "id": "bd26d312-e87f-446e-9a88-4705f0830535",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/checkup",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "checkup"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Register the users",
+      "id": "ff1f3793-d737-415e-9ed1-3268b272d52e",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Aman\",\r\n  \"email\": \"aman@example.com\",\r\n  \"password\": \"password123\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/auth/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "auth",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login User",
+      "id": "d711778b-4fe2-4561-9b96-c2492bdb0ee9",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"aman@example.com\",\r\n  \"password\": \"password123\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Added Product by Admin",
+      "id": "d074fc35-643d-4cc2-8fa0-1f97434138bb",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Samsung S-24\",\r\n  \"description\": \"Exellent Camera Qulaity\",\r\n  \"price\": 129000.99,\r\n  \"stock\": 20\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/admin/product",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "admin",
+            "product"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Product By Admin",
+      "id": "2e72f4d7-a438-4e36-8b07-13d4dcee88b0",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsInJvbGUiOiJhZG1pbiIsIm5hbWUiOiJBZG1pbiIsImlhdCI6MTc2NDIyOTIzMSwiZXhwIjoxNzY0MjM2NDMxfQ.5ITqnNINxV3GZfUJ6PM7_bFeRamC6sXeullUzZ9kjTA",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"productId\": 1,\r\n  \"stock\": 50\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/admin/product/stock",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "admin",
+            "product",
+            "stock"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
